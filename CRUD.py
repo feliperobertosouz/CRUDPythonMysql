@@ -9,7 +9,6 @@ conexao = mysql.connector.connect(
 )
 cursor = conexao.cursor()
 
-
 def janelaLogin():
     sg.theme('Reddit')
     layout = [
@@ -19,7 +18,6 @@ def janelaLogin():
     [sg.Input(key='senha')],
     [sg.Button('Logar')],
     [sg.Text('Você ainda não tentou se conectar', key='mensagem')],
-    [sg.Button('Abrir'), sg.Button('testar')]
 ]
     return sg.Window('Login', layout=layout, finalize=True)
 
@@ -50,7 +48,6 @@ while True:
     
     if window == janela1 and event== 'Logar':
         user = values['usuario']
-       
         
 
         comando = f'SELECT Login From usuarios WHERE Login = "{user}"'
@@ -69,18 +66,12 @@ while True:
             senhaString = ''.join(s)
             if senhaString == senhaDigitada:
                 janela2 = janelaInfo()
+                window['mensagem'].update("LOGIN FEITO COM SUCESSO")
             else:
-                print("ERRADO")
+                print("SENHA ERRADA")
+                window['mensagem'].update("SENHA OU USUARIO INCORRETO")
         else:
-            print("USUARIO não EXISTE")
-        
-
-            
-    if window == janela1 and event== 'testar':
-        comando = 'SELECT Login FROM usuarios'
-        cursor.execute(comando)
-        valores = cursor.fetchall()
-        print(valores)
+            window['mensagem'].update("SENHA OU USUARIO INCORRETO")
 
 cursor.close()
 conexao.close()
