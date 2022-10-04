@@ -14,6 +14,3 @@ from_db = []
 for result in results:
   result = list(result)
   from_db.append(result)
-contador = result[0]
-
-print(contador)
