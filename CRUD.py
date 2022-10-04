@@ -1,5 +1,6 @@
 import mysql.connector 
 import PySimpleGUI as sg
+from tabela import janelaInfo
 
 conexao = mysql.connector.connect(
     host='localhost',
@@ -21,16 +22,6 @@ def janelaLogin():
 ]
     return sg.Window('Login', layout=layout, finalize=True)
 
-def janelaInfo():
-    sg.theme('Dark')
-    layout2 = [
-    [sg.Input('ID'), sg.Text('ABA DE PESQUISA')],
-    [sg.Text('X')],
-    [sg.Text('X')],
-    [sg.Button('Pesquisar')],
-]
-    return sg.Window('Info', layout= layout2, finalize=True)
-
 #Janela inicial
 janela1,janela2 = janelaLogin(), None
 #LOOP DE EVENTOS
@@ -42,9 +33,6 @@ while True:
         break
     if window == janela2 and event == sg.WINDOW_CLOSED:
         janela2.close()
-
-    if window == janela1 and event == 'Abrir':
-        janela2 = janelaInfo()
     
     if window == janela1 and event== 'Logar':
         user = values['usuario']
