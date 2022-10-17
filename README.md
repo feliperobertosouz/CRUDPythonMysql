@@ -16,6 +16,9 @@ Criado por Felipe Roberto
 
 ![TableScreen](/Images/tableScreenExample.png)
 
+- **Cadastrar**(ainda não feito): A tela de cadastrar possuira 3 campos, Nome, senha, sexo. além de um campo normalmente desativado chamado ID. Por ele você terá como cadastrar, editar e excluir registros
+
+![TableScreen](/Images/Schematic_Cadastrar_Editar_Excluir.png)
 
 ## Bibliotecas usadas
 
@@ -23,4 +26,4 @@ Criado por Felipe Roberto
 
 - MysqlConnector - usado para criar a conexão e manipulação do banco de dados com python e MYSQL - https://dev.mysql.com/doc/connector-python/en/
 
-
+- Excalidraw - para fazer os desenhos das telas - https://excalidraw.com
