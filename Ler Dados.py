@@ -3,6 +3,7 @@ from mysql.connector import Error
 from create_db_connection import create_db_connection
 from read_query import read_query
 
+#APENAS USADO PARA TESTES
 q1= """ 
     select COUNT(idUsuarios) from usuarios
 """

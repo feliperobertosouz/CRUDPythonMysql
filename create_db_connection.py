@@ -2,6 +2,12 @@
 import mysql.connector
 from mysql.connector import Error
 
+#Esse metodo cria a conexão com banco de dados de maneira simples sem ocupar espaço em toda pagina que é necessario essa conexão.
+#Possui 5 parametros
+#host_name: se trata do nome da host como ja dito
+#user_name: nome do cadastro que sera usado para logar no banco de dados
+#user_password: senha do usuario do banco de dados
+#db_name: nome do banco de dados que será usado.
 def create_db_connection(host_name, user_name, user_password, db_name):
     connection = None
     try:
