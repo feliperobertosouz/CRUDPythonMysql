@@ -10,7 +10,7 @@ Criado por Felipe Roberto
  -   **login**: 
  A tela de login possui 2 campos de texto e um botão de login, ao digitar o usuario e senha respectivos registrados no banco de dados e apertar o botão de logar ele abrira uma nova tela e mudará o texto de "Você ainda não tentou se conectar" para "Login feito com sucesso"
 
-![LoginScreen](/images/loginScreenExample.png "Tela de Login")
+![LoginScreen](/images/loginScreenExample.png)
 
 - **Tabela**: A tela possui apenas 1 função que é ser uma tabela que mostra os registros do banco de dados.
 
