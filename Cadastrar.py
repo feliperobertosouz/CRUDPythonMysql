@@ -9,11 +9,12 @@ def Limpar(values,window):
     return None
     print("executado limpar")
 
-def Cadastrar(usuario,senha,sexo,cursor):  
+def Cadastrar(usuario,senha,sexo,cursor,connection):  
     mycursor = cursor
     sql = "INSERT INTO usuarios (Login, Senha, Sexo) VALUES (%s, %s, %s)"
     val = (usuario,senha,sexo) 
     mycursor.execute(sql,val)
+    connection.commit()
     print(mycursor.rowcount, "record inserted.")
     return(print("executado cadastrar"))
 

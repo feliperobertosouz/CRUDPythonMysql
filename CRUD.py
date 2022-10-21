@@ -60,8 +60,9 @@ while True:
         login = values['user']
         senhaCadastrar = values['password']
         sexCadastrar = values['sex']
-        Cadastrar(login,senhaCadastrar,sexCadastrar,cursor)
+        Cadastrar(login,senhaCadastrar,sexCadastrar,cursor,connection)
         Limpar(values,window)
+        
         
     if window == janela1 and event ==  'Limpar':
         Limpar(values,window)
