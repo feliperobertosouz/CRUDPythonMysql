@@ -34,6 +34,7 @@ def janelaInfo():
         justification='right',
         key='-TABLE-',
         row_height=35
-        )]
+        )],
+        [sg.Button('Voltar')]
         ]
     return sg.Window('Login', layout=layout, finalize=True)
