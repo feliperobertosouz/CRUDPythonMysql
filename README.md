@@ -1,4 +1,4 @@
-# CRUDPythonMysql
+# DESATUALIZADO
 
 Bem vindo ao CRUD python do Felipe, nesse documento você verá uma simples catalogação do que eu acabei desenvolvendo com esse projeto.
 

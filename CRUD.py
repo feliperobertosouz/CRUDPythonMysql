@@ -4,6 +4,7 @@ from tabela import janelaInfo
 from create_db_connection import *
 from janelaLogin import janelaLogin, Logar
 from menu import janelaMenu
+from Cadastrar import *
 #Conexão com banco de dados
 connection = create_db_connection("localhost","root","fek123","bdtestes")
 #Cursor = aquele que executara as querys
@@ -37,7 +38,8 @@ while True:
             window['mensagem'].Update("Falha ao logar")
 
     if window == janela1 and event== 'Cadastrar Cliente':
-        print("clicou em cadastrar Clientes")
+        janela1.close()
+        janela1 = janelaCadastro()
 
     if window == janela1 and event== 'Visualizar Clientes':
         janela1.close()
@@ -50,6 +52,19 @@ while True:
     if window == janela1 and event== 'Voltar':
         janela1.close()
         janela1 = janelaMenu()
+
+    if window == janela1 and event == 'Cadastrar':
+        connection = create_db_connection("localhost","root","fek123","bdtestes")
+        #Cursor = aquele que executara as querys
+        cursor = connection.cursor()
+        login = values['user']
+        senhaCadastrar = values['password']
+        sexCadastrar = values['sex']
+        Cadastrar(login,senhaCadastrar,sexCadastrar,cursor)
+        Limpar(values,window)
+        
+    if window == janela1 and event ==  'Limpar':
+        Limpar(values,window)
 
 cursor.close()
 connection.close()

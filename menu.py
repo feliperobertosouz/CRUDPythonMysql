@@ -6,6 +6,7 @@ def janelaMenu():
     layout = [
     [sg.Button('Cadastrar Cliente')],
     [sg.Button('Visualizar Clientes')],
+    [sg.Button('Atualizar Cliente')],
     [sg.Button('DESLOGAR')],
     [sg.Text('Você logou com sucesso', key='mensagemlogin')],
 ]
