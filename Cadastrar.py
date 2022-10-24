@@ -6,6 +6,7 @@ def Limpar(values,window):
         window['user'].update('')
         window['password'].update('')
         window['sex'].update('')
+        
     return None
     print("executado limpar")
 
@@ -16,6 +17,8 @@ def Cadastrar(usuario,senha,sexo,cursor,connection):
     mycursor.execute(sql,val)
     connection.commit()
     print(mycursor.rowcount, "record inserted.")
+    cursor.close()
+    connection.close()
     return(print("executado cadastrar"))
 
 
