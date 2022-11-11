@@ -16,11 +16,8 @@ Criado por Felipe Roberto
 
 ![TableScreen](/Images/tableScreenExample.png)
 
-- **Cadastrar**(ainda não feito): A tela de cadastrar possuira 3 campos, Nome, senha, sexo. além de um campo normalmente desativado chamado ID. Por ele você terá como cadastrar, editar e excluir registros
 
-![TableScreen](/Images/Schematic_Cadastrar_Editar_Excluir.png)
-
-## Bibliotecas usadas
+## Bibliotecas/Tecnologias usadas
 
 - PySimpleGUI - usado para criar as interfaces graficas de maneira rapida no projeto - https://www.pysimplegui.org/en/latest/
 
